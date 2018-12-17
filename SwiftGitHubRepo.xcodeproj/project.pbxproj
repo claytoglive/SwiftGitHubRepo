@@ -13,7 +13,6 @@
 		694964AC21C5D7880038856E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 694964AB21C5D7880038856E /* Assets.xcassets */; };
 		694964AF21C5D7880038856E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694964AD21C5D7880038856E /* LaunchScreen.storyboard */; };
 		69BCA03921C709B70003BCB4 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BCA03821C709B70003BCB4 /* RepoViewController.swift */; };
-		69BCA03B21C733B10003BCB4 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 69BCA03A21C733B10003BCB4 /* sample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,7 +37,6 @@
 		694964AE21C5D7880038856E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		694964B021C5D7880038856E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69BCA03821C709B70003BCB4 /* RepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
-		69BCA03A21C733B10003BCB4 /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +77,6 @@
 				69BCA03821C709B70003BCB4 /* RepoViewController.swift */,
 				694964B021C5D7880038856E /* Info.plist */,
 				694964AD21C5D7880038856E /* LaunchScreen.storyboard */,
-				69BCA03A21C733B10003BCB4 /* sample.json */,
 			);
 			path = SwiftGitHubRepo;
 			sourceTree = "<group>";
@@ -151,7 +148,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				694964AF21C5D7880038856E /* LaunchScreen.storyboard in Resources */,
-				69BCA03B21C733B10003BCB4 /* sample.json in Resources */,
 				694964AC21C5D7880038856E /* Assets.xcassets in Resources */,
 				694964AA21C5D7860038856E /* Main.storyboard in Resources */,
 			);

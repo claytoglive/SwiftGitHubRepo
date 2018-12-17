@@ -17,7 +17,9 @@ class RepoViewController: UIViewController,UITableViewDataSource, UITableViewDel
     
     @IBOutlet weak var repoTableView: UITableView!
     
-    var repoToken :String!
+    
+    var userJSON : [String : Any]!
+    var repoJSON : [[String : Any]]!
     
     var repoList: [String]! = []
     
@@ -42,53 +44,36 @@ class RepoViewController: UIViewController,UITableViewDataSource, UITableViewDel
         repoTableView.delegate = self
         repoTableView.dataSource = self
         
-        navBar.topItem?.title = "Repos for Token: " + repoToken
-        
-        
-        parseGitRepo()
+        parseUserJSON()
+
+        parseRepoJSON()
         
         repoTableView.reloadData()
     }
     
-    func parseGitRepo(){
+    
+    func parseUserJSON(){
         
-        do {
-            
-            /*
-                Encountered issue with permissions, so sample JSON data is passed.
-             */
-            
-            let path = Bundle.main.path(forResource: "sample", ofType: "json")
-            
-            let data = try Data(contentsOf: URL(fileURLWithPath: path!), options: .mappedIfSafe)
-            
-            let json = try JSONSerialization.jsonObject(with: data as Data, options:.allowFragments) as! [String:AnyObject]
-
-            var x = 0
-            
-            for _ in json["items"] as? [[String: Any]] ?? [] {
-                
-                guard let item = json["items"] as? [[String: Any]] else {
-                    // Handle error here
-                    return
-                }
-            
-                if let nameString = item[x]["name"]! as? String {
-                    repoList.append(nameString)
-                }
-                x = x + 1
-            }
-            
-
-           
-        }
-        catch {
-            print("Error: No data")
-        }
+        let nameString = self.userJSON["login"]! as? String
         
-       
+        navBar.topItem?.title = "Repos for user: " + nameString!
         
     }
+    
+    func parseRepoJSON(){
+        
+            var x = 0
+
+            for _ in self.repoJSON  {
+                
+                if let nameString = self.repoJSON[x]["name"]! as? String {
+                    repoList.append(nameString)
+                }
+
+                x = x + 1
+            }
+
+        }
     
 
 }

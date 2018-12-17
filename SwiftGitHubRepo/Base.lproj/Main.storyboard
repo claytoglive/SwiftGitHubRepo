@@ -39,15 +39,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="epY-Mu-8fL" secondAttribute="trailing" constant="20" id="3xf-Gx-IzY"/>
-                            <constraint firstItem="epY-Mu-8fL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="buc-tG-JH2"/>
-                            <constraint firstItem="epY-Mu-8fL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="hN1-qt-qOh"/>
+                            <constraint firstItem="epY-Mu-8fL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="4ou-u2-dRp"/>
+                            <constraint firstItem="epY-Mu-8fL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JQj-dd-kD6"/>
+                            <constraint firstItem="epY-Mu-8fL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W6G-dy-5Cp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="cookieLabel" destination="Utb-w0-6Me" id="Df0-VI-gfY"/>
-                        <segue destination="D4E-Rc-Bch" kind="show" identifier="repoSegue" id="hve-P3-jYP"/>
+                        <segue destination="D4E-Rc-Bch" kind="showDetail" identifier="repoSegue" id="hve-P3-jYP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,16 +62,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdD-G0-QXf">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdD-G0-QXf">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Repo List" id="qaL-2I-mJA"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D1k-bV-TPm">
-                                <rect key="frame" x="0.0" y="72" width="375" height="352"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D1k-bV-TPm">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="repoTableCell" id="Mij-tj-asb">
@@ -86,6 +84,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jdD-G0-QXf" firstAttribute="leading" secondItem="D1k-bV-TPm" secondAttribute="leading" id="1NC-jX-kGk"/>
+                            <constraint firstItem="jdD-G0-QXf" firstAttribute="trailing" secondItem="D1k-bV-TPm" secondAttribute="trailing" id="BIc-ch-wFi"/>
+                            <constraint firstItem="D1k-bV-TPm" firstAttribute="top" secondItem="jdD-G0-QXf" secondAttribute="bottom" id="LLx-yV-ZsW"/>
+                            <constraint firstAttribute="trailing" secondItem="jdD-G0-QXf" secondAttribute="trailing" id="PT8-zY-pb3"/>
+                            <constraint firstItem="jdD-G0-QXf" firstAttribute="top" secondItem="iI8-cj-MrB" secondAttribute="top" constant="8" id="YEl-IV-vCC"/>
+                            <constraint firstItem="D1k-bV-TPm" firstAttribute="bottom" secondItem="iI8-cj-MrB" secondAttribute="bottom" id="ksS-hw-XgU"/>
+                            <constraint firstItem="jdD-G0-QXf" firstAttribute="leading" secondItem="tQ9-Nd-hDO" secondAttribute="leading" id="lxa-YV-0qO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iI8-cj-MrB"/>
                     </view>
                     <connections>
@@ -95,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIm-B0-nLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="106.59670164917542"/>
+            <point key="canvasLocation" x="961" y="139"/>
         </scene>
     </scenes>
 </document>
