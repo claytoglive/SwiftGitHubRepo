@@ -15,6 +15,6 @@ This will provide a code.
 3) Next the access token needs to be gained by the URL 
 https://github.com/login/oauth/access_token?client_id=<client_id>&client_secret=<client_secret>&code=<code>
 Where <client_id> should be replaced with the actual client_id, and <client_secret> should be replaced with the actual client secret, and <code> should be replaced with the actual code returned from the previous step.
-  
+
 4) Once the access token is returned, this can be used to access the various GitHUb API such as https://api.github.com/user/repos?access_token=<access_token>
 Where <access_token> should be replaced with the actual access token.
